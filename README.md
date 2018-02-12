@@ -14,3 +14,7 @@ Handlebars.registerHelper('helperName', helperFunction)
 More detailed usage docs are in each of the helper's files in the `helpers` folder.
 
  * `formatCurrency(amount, options)`
+
+## ES6+
+
+These are written in ES6+ Javascript. You should really transpile these, but again, you should be doing this in your own build pipeline.
