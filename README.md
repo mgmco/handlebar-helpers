@@ -1,4 +1,4 @@
-# MGMCo Handlebars helpers
+# MGMCo Handlebars helpers [![Build Status](https://travis-ci.org/mgmco/handlebar-helpers.svg?branch=master)](https://travis-ci.org/mgmco/handlebar-helpers)
 
 Some useful helpers to be used with any Handlebars environment.
 
