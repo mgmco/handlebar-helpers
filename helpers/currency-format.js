@@ -24,17 +24,18 @@ const formatCurrency = (amount, options) => {
 
   if (options.isMoney) {
     // Set the amount of decimals we want to show, it's 2 or 0
-    const hasTrailingZeroZero = amount === 0 || amount % 1 === 0;
+    const hasTrailingZeroZero = amount % 1 === 0;
+    const localeOptions = {
+      style: 'currency',
+      currency: options.abbreviation
+    };
 
     if (hasTrailingZeroZero && !options.decimalTerminator) {
-      currencyStyle.maximumFractionDigits = 0;
-      currencyStyle.minimumFractionDigits = 0;
+      localeOptions.maximumFractionDigits = 0;
+      localeOptions.minimumFractionDigits = 0;
     }
 
-    let localisedValue = new Intl.NumberFormat(options.locale, {
-      style: 'currency',
-      currency: options.abbreviation,
-    }).format(amount);
+    let localisedValue = new Intl.NumberFormat(options.locale, localeOptions).format(amount);
 
     if (hasTrailingZeroZero && options.decimalTerminator) {
       localisedValue = `${localisedValue.slice(0, -2)}${options.decimalTerminator}`;
