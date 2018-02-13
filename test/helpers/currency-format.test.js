@@ -19,7 +19,7 @@ test('currencyFormat() properly processes a non-monetary currency', () => {
     isMoney: false,
     singularName: 'staatslot',
     pluralName: 'staatsloten',
-    templateString: 'AMOUNT NAME'
+    templateString: '{{amount}} {{currency}}'
   }
 
   const hbsHelper = Handlebars.registerHelper('currencyFormat', helperFunction)
