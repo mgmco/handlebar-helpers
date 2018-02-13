@@ -14,7 +14,7 @@ test('currencyFormat() properly processes a monetary currency', () => {
   expect(result).toBe('€ 25.43')
 })
 
-test('currencyFormat() properly processes a monetary currency with support for astlijntje', () => {
+test('currencyFormat() properly processes a monetary currency with support for kastlijntje', () => {
   const options = {
     isMoney: true,
     locale: 'de-DE',
