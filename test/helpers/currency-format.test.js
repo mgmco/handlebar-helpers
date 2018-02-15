@@ -14,12 +14,26 @@ test('currencyFormat() properly processes a monetary currency', () => {
   expect(result).toBe('€ 25.43')
 })
 
+test('currencyFormat() properly processes a monetary currency with support for kastlijntje', () => {
+  const options = {
+    isMoney: true,
+    locale: 'de-DE',
+    abbreviation: 'EUR',
+    decimalTerminator: '-'
+  }
+
+  const result = helperFunction(25, options)
+
+  expect(typeof result).toBe('string')
+  expect(result).toBe('€ 25.-')
+})
+
 test('currencyFormat() properly processes a non-monetary currency', () => {
   const options = {
     isMoney: false,
     singularName: 'staatslot',
     pluralName: 'staatsloten',
-    templateString: 'AMOUNT NAME'
+    templateString: '{{amount}} {{currency}}'
   }
 
   const hbsHelper = Handlebars.registerHelper('currencyFormat', helperFunction)

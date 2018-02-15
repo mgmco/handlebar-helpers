@@ -1,1 +1,1 @@
-exports.formatCurrency = require('./helpers/currency-format')
+exports.formatCurrency = require('./helpers/currency-format');
