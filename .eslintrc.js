@@ -14,6 +14,7 @@ module.exports = {
     "no-continue": ["off"],
     "import/no-unresolved": [2, {}],
     "import/prefer-default-export": ["off"],
-    "class-methods-use-this": ["off"]
+    "class-methods-use-this": ["off"],
+    "eol-last": ["error", "always"]
   }
 }
