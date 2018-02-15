@@ -14,6 +14,12 @@ Handlebars.registerHelper('helperName', helperFunction)
 More detailed usage docs are in each of the helper's files in the `helpers` folder.
 
  * `formatCurrency(amount, options)`
+ * `math(operand1, operator, operand2)`
+ * `concat(fragment1, [fragment2, fragment3 ...])`
+ * `isEqual(value1, value2)`
+ * `or(value1, [value2 ...])`
+ * `not(value)`
+ * `and(value1, value2)`
 
 ## ES6+
 
