@@ -16,6 +16,7 @@
     "jest": "^22.2.2"
   },
   "scripts": {
+    "pretest": "./node_modules/.bin/eslint ./",
     "test": "./node_modules/.bin/jest"
   }
 }
