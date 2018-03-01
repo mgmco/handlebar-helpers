@@ -61,7 +61,7 @@ const formatCurrency = params => {
     return localisedValue;
   }
 
-  const name = amount > 1 ? currency.pluralName : currency.singularName;
+  const name = amount === 1 ? currency.singularName : currency.pluralName;
   return format.replace('{{amount}}', amount).replace('{{currency}}', name);
 };
 

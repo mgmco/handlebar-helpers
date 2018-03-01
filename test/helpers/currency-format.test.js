@@ -47,10 +47,13 @@ test('currencyFormat() properly processes a non-monetary currency', () => {
 
   const pluralResult = Handlebars.compile(template)({ ...params, amount: 3 });
   const singleResult = Handlebars.compile(template)({ ...params, amount: 1 });
+  const nilResult = Handlebars.compile(template)({ ...params, amount: 0 });
 
   expect(typeof pluralResult).toBe('string');
   expect(pluralResult).toBe('3 staatsloten');
   expect(typeof singleResult).toBe('string');
   expect(singleResult).toBe('1 staatslot');
+  expect(typeof nilResult).toBe('string');
+  expect(nilResult).toBe('0 staatsloten');
 });
 
