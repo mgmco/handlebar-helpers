@@ -31,7 +31,7 @@ const formatCurrency = params => {
     locale
   } = params.hash ? params.hash : params;
 
-  if (typeof currency.isMoney === 'undefined') {
+  if (typeof currency.isMoney !== 'boolean') {
     throw new Error('"currency.isMoney" is not set');
   } else if (currency.isMoney === false && !format) {
     throw new Error('"format" is not set for a non-monetary currency');
